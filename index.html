@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Scramble Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            height: 15vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(9, 169, 159);
+        }
+
+        h1 {
+            text-transform: uppercase;
+            color: aliceblue;
+            font-size: 2.5rem;
+            letter-spacing: 5px;
+            text-shadow: 0 1px 0 #2dc2cf, 0 2px 0 #2dc2cf, 0 3px 0 #2dc2cf, 0 4px 0 #2dc2cf, 0 10px 5px rgb(61, 51, 255);
+        }
+
+        section {
+            min-height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(8, 255, 239, 0.829);
+        }
+
+        .gameArea {
+            width: 90%;
+            max-width: 500px;
+            padding: 30px;
+            /* background-color: rgb(4, 180, 255); */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 8px 6px -6px black;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.406);
+            /* Change the alpha value to control the opacity of the background */
+            backdrop-filter: blur(10px);
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        input {
+            width: 100%;
+            max-width: 300px;
+            padding: 15px 20px;
+            text-align: center;
+            border-radius: 25px;
+            outline: none;
+            border: none;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 20px 0;
+            font-size: 1.1rem;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+        }
+
+        button {
+            font-size: 1.1rem;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            background-color: #fff;
+            color: #333;
+            padding: 15px 30px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        button.btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            .gameArea {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Guess the Word Game</h1>
+    </header>
+    <section>
+        <div class="gameArea">
+            <h3 class="msg">What Do You Call It In BGMI:</h3>
+            <input type="text" class="hidden">
+            <button class="btn">Click Here to Start</button>
+        </div>
+    </section>
+    <!-------------- javascript ---------------->
+    <script src="js/index.js"></script>
+</body>
+
+</html>
